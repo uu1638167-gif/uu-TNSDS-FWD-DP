@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student ID Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      width: 320px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .card-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .card-header h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card-header p {
+      margin: 2px 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .card-details {
+      margin-top: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .card.expanded .card-details {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .card-details p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .toggle-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" onclick="this.classList.toggle('expanded')">
+    <!-- Front of the card -->
+    <div class="card-header">
+      <img src="https://uploads.onecompiler.io/43urmjj36/43uuve7ga/WhatsApp%20Image%202025-08-26%20at%2013.58.17_73dc4c3a.jpg" alt="Student Photo">
+      <div>
+        <h2>NAME:Umamaheswari</h2>
+        <p>ID: 3465789809</p>
+        <p>course:BSC</p>
+      </div>
+    </div>
+
+    <!-- Hidden details -->
+    <div class="card-details">
+      <p><strong>Email:</strong>uu1638167@gimail.com</p>
+      <p><strong>Phone:</strong>8767899565</p>
+      <p><strong>Address:</strong>vallalar college,vadalur</p>
+    </div>
+
+    <div class="toggle-note">Click to reveal/hide details</div>
+  </div>
+
+</body>
+</html>
